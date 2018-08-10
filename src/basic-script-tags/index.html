@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RxFire: Basic Script Tags</title>
+  <!-- 
+    THIS IS NOT THE RECOMMEND WAY TO LOAD A PRODUCTION APP 
+    LOOK AT THE WEBPACK EXAMPLE INSTEAD
+  -->
+  <script src="lib/rxjs.umd.js" defer></script>
+  <script src="lib/firebase-app.js" defer></script>
+  <script src="lib/firebase-firestore.js" defer></script>
+  <script src="lib/firebase-storage.js" defer></script>
+  <script src="lib/rxfire-firestore.js" defer></script>
+  <script src="lib/rxfire-storage.js" defer></script>
+  <script src="index.js" defer></script>
+</head>
+<body class="font-sans">
+  
+  <div class="container mx-auto">
+
+    <div class="w-screen">
+      <h3>Firestore</h3>
+
+      <button data-ref="btnSmall" data-query="size" data-value="small">
+        Small
+      </button>
+      <button data-ref="btnMedium" data-query="size" data-value="medium">
+        Medium
+      </button>
+      <button data-ref="btnLarge" data-query="size" data-value="large">
+        Large
+      </button>
+
+      <ul data-ref="list">
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "basic-script-tags",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "copy:rxfire": "cpx 'node_modules/rxfire/*.js' ../../public/basic-script-tags/lib",
+    "copy:firebase": "cpx 'node_modules/firebase/*.js' ../../public/basic-script-tags/lib",
+    "copy:rxjs": "cpx 'node_modules/rxjs/bundles/rxjs.umd.js' ../../public/basic-script-tags/lib",
+    "copy:lib": "yarn copy:rxfire && yarn copy:firebase && yarn copy:rxjs",
+    "copy:site": "cpx './*.{html,js}' ../../public/basic-script-tags/",
+    "dev": "yarn copy:lib && cpx './*.{html,js}' ../../public/basic-script-tags/ --watch",
+    "build": "yarn copy:lib && yarn copy:site"
+  },
+  "dependencies": {
+    "firebase": "^5.3.1",
+    "rxfire": "^2.0.0-canary.007ef8f",
+    "rxjs": "^6.2.2"
+  },
+  "devDependencies": {
+    "cpx": "^1.5.0"
+  }
+}
