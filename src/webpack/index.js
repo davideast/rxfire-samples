@@ -35,6 +35,7 @@ const loggedInUser$ = authState(app.auth()).pipe(filter(user => user !== null));
 // Get the file when selected
 const fileSelect$ = fromEvent(refs.inputFile, 'change');
 
+// When a user is logged in take them to the upload screen
 loggedInUser$.pipe(
   map(_ => {
     refs.viewLogin.style.display = 'none';
@@ -42,22 +43,30 @@ loggedInUser$.pipe(
   })
 ).subscribe();
 
+// Wait for a user to be logged in AND for a file to be selected
 combineLatest(loggedInUser$, fileSelect$).pipe(
   switchMap(([user, event]) => {
+    // Create a reference from a uid and random string
+    // /uploads/:uid/:name
     const name = Math.random().toString(36).substring(5);
     const blob = event.target.files[0];
     const type = blob.type.replace('image/');
     const ref = app.storage().ref(`uploads/${user.uid}/${name}.${type}`);
+    // start the observable upload
     return put(ref, blob);
   }),
   map(snapshot => {
+    // calculate progress
     refs.progressUpload.value = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
     return snapshot;
   }),
+  // Wait for the upload to complete
   filter(snapshot => snapshot.totalBytes === snapshot.bytesTransferred),
+  // Get the download url
   mergeMap(snapshot => getDownloadURL(snapshot.ref))
 )
   .subscribe(url => {
+    // Add link to the DOM
     const uploadLink = document.createElement('a');
     uploadLink.href = url;
     uploadLink.textContent = url;
