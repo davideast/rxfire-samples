@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webpack RxFire</title>
+  <script src="bundle.js" defer></script>
+</head>
+
+<body>
+
+  <div data-ref="viewLogin">
+    <button data-ref="btnLogin">
+      Login Anonymously
+    </button>
+  </div>
+
+  <div data-ref="viewUpload" style="display: none;">
+    <input accept=".png,.jpg" data-ref="inputFile" type="file" value="Select a File" multiple="false" />
+
+    <progress data-ref="progressUpload" max="100" value="0"></progress>
+
+  </div>
+
+</body>
+
+</html>
