@@ -24,7 +24,7 @@
   const col = firestore.collection('records');
   
   // Grab the exports from rxfire
-  const { collectionData } = rxfire;
+  const { snapToData, collectionChanges } = rxfire;
   // Grab the exports from rxjs
   const { fromEvent, operators, merge } = rxjs;
   // Collect all buttons in an array
@@ -61,27 +61,49 @@
         buttons.filter(b => b !== clickedButton).forEach(b => b.disabled = false);
         // disable the currently clicked button
         clickedButton.disabled = true;
+        // delete all current records in list
+        refs.list.innerHTML = '';
         // create the new query based off the clicked button
         const queriedCol = col.where(query, '==', value);
         // create an observable of the query and map the 'id' to the unwrapped
         // snapshot
-        return collectionData(queriedCol, 'id');
+        return collectionChanges(queriedCol);
       }),
+      operators.map(changes => changes.map(c => {
+        return { type: c.type, ...snapToData(c.doc, 'id') }
+      })),
       operators.map(records => {
-        // create a fragment of lis based on the updated record list
+        // create a fragment of lis based on the added record list
         const fragment = document.createDocumentFragment();
+
+        // process records based on type
         records.forEach(record => {
-          const li = document.createElement('li');
-          li.textContent = record.name;
-          li.id = record.id;
-          fragment.appendChild(li);
+          switch(record.type) {
+            case 'added': {
+              // add new records to a fragment
+              const li = document.createElement('li');
+              li.textContent = record.name;
+              li.id = record.id;
+              fragment.appendChild(li);
+              break;
+            }
+            case 'modified': {
+              // change the content of any modified elements
+              const li = document.querySelector(`#${record.id}`);
+              li.textContent = record.name;
+              break;
+            }
+            case 'removed': {
+              // remove "removed" elements from the DOM
+              document.querySelector(`#${record.id}`).remove();
+              break;
+            }
+          }
         });
         return fragment;
       })
     ).subscribe(fragment => {
-      // clear the list items
-      refs.list.innerHTML = '';
-      // apend to the DOM
+      // append fragment to the DOM
       refs.list.appendChild(fragment);
     });
     

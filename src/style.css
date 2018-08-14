@@ -1,3 +1,14 @@
+
+.combine-image-card {
+  @apply 
+  .flex 
+  .items-center 
+  .py-4 
+  .border-b-4 
+  .border-solid 
+  .border-purple
+}
+
 @tailwind preflight;
 @tailwind components;
 @tailwind utilities;

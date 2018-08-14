@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "build:css": "tailwind build src/style.css -c tailwind.js -o public/style.css"
+  },
   "dependencies": {
     "firebase": "^5.3.1",
     "rxfire": "^1.0.7",
