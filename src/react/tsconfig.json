@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "strict": true,
+    "module": "esnext",
+    "target": "es5",
+    "jsx": "react",
+    "moduleResolution": "node",
+    "lib": ["ES2015", "dom"]
+  },
+  "files": [
+    "./index.tsx"
+  ]
+}
