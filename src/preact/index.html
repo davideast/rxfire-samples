@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preact + RxFire</title>
+  <style>
+* {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+body, h1, h2, h3, h4, h5, p, ul {
+  margin: 0;
+}
+
+.tt-header {
+    background: #fcfcfc;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #acacac;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.tt-logotext {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.tt-container {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.tt-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tt-list li {
+    height: 100px;
+    border-bottom: 1px solid #acacac;
+    padding: 20px 20px 10px 20px;
+}
+
+.tt-listitem-text {
+    text-transform: uppercase;
+    color: #0a0a0a;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.tt-listitem-type {
+    text-transform: uppercase;
+    color: #9f9f9f;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.tt-listitem-tracer {
+    display:  flex;
+    justify-content: space-between;
+}
+
+.tt-list li:nth-child(even) {
+    background: #fafafa;
+}
+
+.flash-change {
+    animation: flashChange 0.5s;
+}
+
+/* #01803c **/
+@keyframes flashChange {
+    from { 
+        opacity: 1;
+        background: inherit; 
+    }
+    to { 
+        opacity: .3; 
+        background: #ffe57d;
+    }
+}
+  </style>
+  <script>window.__data__ = [{"capacity":50,"name":"Bamboo Sushi NE","occupants":45,"type":"Sushi","id":"bamboo_sushi_ne"},{"capacity":340,"name":"Beach Chalet","occupants":336,"type":"American","id":"beach_chalet"},{"capacity":80,"name":"Brenda's French Soul Food","occupants":79,"type":"French","id":"brendas_french_soul_food"},{"capacity":80,"name":"Burger Fi","occupants":75,"type":"American","id":"burger_fi"},{"capacity":220,"name":"Californios","occupants":219,"type":"Mexican","id":"californios"},{"capacity":140,"name":"Cliff House","occupants":134,"type":"Seafood","id":"cliff_house"},{"capacity":200,"name":"Delfina","occupants":199,"type":"Italian","id":"delfina"},{"capacity":60,"name":"El Mansour","occupants":61,"type":"Moroccan","id":"el_mansour"},{"capacity":260,"name":"Fog Harbor Fish House","occupants":257,"type":"Seafood","id":"fog_harbor_fish_house"},{"capacity":86,"name":"Hillstone","occupants":85,"type":"American","id":"hillstone"},{"capacity":160,"name":"Lazy Bear","occupants":159,"type":"American","id":"lazy_bear"},{"capacity":210,"name":"Marlowe","occupants":211,"type":"American","id":"marlowe"},{"capacity":100,"name":"Nopalito","occupants":100,"type":"Mexican","id":"nopalito"},{"capacity":90,"name":"Panzano","occupants":89,"type":"Italian","id":"panzano"},{"capacity":500,"name":"Punch Bowl Social","occupants":493,"type":"Bar","id":"punch_bowl_social"},{"capacity":120,"name":"Roe","occupants":120,"type":"Seafood","id":"roe"},{"capacity":90,"name":"Sanraku","occupants":89,"type":"Japanese","id":"sanraku"},{"capacity":120,"name":"Sushi Den","occupants":124,"type":"Sushi","id":"sushi_den"},{"capacity":90,"name":"Sweet Maple","occupants":87,"type":"Breakfast","id":"sweet_maple"},{"capacity":82,"name":"Table 6","occupants":83,"type":"American","id":"table_6"},{"capacity":400,"name":"The Big 4","occupants":397,"type":"American","id":"the_big_4"},{"capacity":310,"name":"Yard House","occupants":304,"type":"American","id":"yard_house"}]</script>
+  <script src="bundle.js" defer></script>
+</head>
+<body>
+  
+  <header class="tt-header">
+    <h3 class="tt-logotext">TABLE TRACER</h3>
+  </header>
+  <div id="root">
+    <!-- ::APP:: -->
+  </div>
+  
+</body>
+</html>

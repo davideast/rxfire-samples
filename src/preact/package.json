@@ -1,0 +1,24 @@
+{
+  "name": "webpack-rxfire",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack --watch",
+    "build": "webpack --mode='production'"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "firebase": "^5.3.1",
+    "preact": "^8.3.1",
+    "preact-render-to-string": "^3.8.2",
+    "rxfire": "^2.0.0",
+    "rxjs": "^6.2.2"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.5.2",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  }
+}

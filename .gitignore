@@ -3,3 +3,4 @@ node_modules
 yarn-error.log
 firebase-error.log
 .DS_Store
+.firebase
