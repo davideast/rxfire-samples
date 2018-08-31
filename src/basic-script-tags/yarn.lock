@@ -896,9 +896,9 @@ rimraf@^2.6.1:
   dependencies:
     glob "^7.0.5"
 
-rxfire@^2.0.0-canary.007ef8f:
-  version "2.0.0-canary.007ef8f"
-  resolved "https://registry.yarnpkg.com/rxfire/-/rxfire-2.0.0-canary.007ef8f.tgz#83c1262af413da5cd1249a3acfeaacf53ee886b4"
+rxfire@^3.0.0:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/rxfire/-/rxfire-3.0.1.tgz#73e2408feee8fdbb6458d28189a53aff7d278546"
 
 rxjs@^6.2.2:
   version "6.2.2"

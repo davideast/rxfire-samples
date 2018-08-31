@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "firebase": "^5.3.1",
-    "rxfire": "^2.0.0-canary.007ef8f",
+    "rxfire": "^3.0.0",
     "rxjs": "^6.2.2"
   },
   "devDependencies": {

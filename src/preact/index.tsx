@@ -15,10 +15,6 @@ const CONFIG = {
   messagingSenderId: "1090774042344"
 };
 
-/**
- * Lazy load Firebase App, Firestore, and RxFire. 
- * @param config 
- */
 function lazyLoad(config: any, enablePersistence = true) {
   const app$ = from(import('firebase/app'));
   // NOTE: The lazy load for Firestore does not work with TypeScipt
