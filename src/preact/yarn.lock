@@ -2490,9 +2490,9 @@ run-queue@^1.0.0, run-queue@^1.0.3:
   dependencies:
     aproba "^1.1.1"
 
-rxfire@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/rxfire/-/rxfire-2.0.0.tgz#c9961d01f74334bd5874cc7adbdd66e2605c1c28"
+rxfire@^3.0.0:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/rxfire/-/rxfire-3.0.1.tgz#73e2408feee8fdbb6458d28189a53aff7d278546"
 
 rxjs@^6.1.0, rxjs@^6.2.2:
   version "6.2.2"

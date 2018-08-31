@@ -13,7 +13,7 @@
     "firebase": "^5.3.1",
     "preact": "^8.3.1",
     "preact-render-to-string": "^3.8.2",
-    "rxfire": "^2.0.0",
+    "rxfire": "^3.0.0",
     "rxjs": "^6.2.2"
   },
   "devDependencies": {

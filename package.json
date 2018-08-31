@@ -4,12 +4,14 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build:css": "tailwind build src/style.css -c tailwind.js -o public/style.css"
+    "build:css": "tailwind build src/style.css -c tailwind.js -o public/style.css",
+    "build": "npm run build --prefix src/basic-script-tags && npm run build --prefix src/firestore-cloud-storage && npm run build --prefix src/preact && npm run build --prefix src/react && npm run build --prefix src/webpack"
   },
   "dependencies": {
     "firebase": "^5.3.1",
-    "rxfire": "^1.0.7",
+    "rxfire": "^3.0.0",
     "rxjs": "^6.2.2",
+    "spawn-rx": "^2.0.12",
     "tailwindcss": "^0.6.4",
     "ts-loader": "^4.4.2",
     "typescript": "^3.0.1",

@@ -811,7 +811,7 @@ date-now@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/date-now/-/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
 
-debug@^2.1.2, debug@^2.2.0, debug@^2.3.3:
+debug@^2.1.2, debug@^2.2.0, debug@^2.3.3, debug@^2.5.1:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
   dependencies:
@@ -1050,7 +1050,7 @@ fast-json-stable-stringify@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/fast-json-stable-stringify/-/fast-json-stable-stringify-2.0.0.tgz#d5142c0caee6b1189f87d3a76111064f86c8bbf2"
 
-faye-websocket@0.11.1, faye-websocket@>=0.6.0:
+faye-websocket@0.11.1:
   version "0.11.1"
   resolved "https://registry.yarnpkg.com/faye-websocket/-/faye-websocket-0.11.1.tgz#f0efe18c4f56e4f40afc7e06c719fd5ee6188f38"
   dependencies:
@@ -1090,24 +1090,6 @@ find-up@^3.0.0:
   resolved "https://registry.yarnpkg.com/find-up/-/find-up-3.0.0.tgz#49169f1d7993430646da61ecc5ae355c21c97b73"
   dependencies:
     locate-path "^3.0.0"
-
-firebase-util@^0.2.5:
-  version "0.2.5"
-  resolved "https://registry.yarnpkg.com/firebase-util/-/firebase-util-0.2.5.tgz#d4df36bbcf55b49b8da48989ea81682d8b919f0a"
-  dependencies:
-    firebase "2.2.x"
-
-firebase@2.2.x:
-  version "2.2.9"
-  resolved "https://registry.yarnpkg.com/firebase/-/firebase-2.2.9.tgz#d09609d3c7fcfa679b2574c806c8e914f99a0eef"
-  dependencies:
-    faye-websocket ">=0.6.0"
-
-firebase@^2.3.2:
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/firebase/-/firebase-2.4.2.tgz#4e1119ec0396ca561d8a7acbff1630feac6c0a31"
-  dependencies:
-    faye-websocket ">=0.6.0"
 
 firebase@^5.3.1:
   version "5.3.1"
@@ -1615,6 +1597,10 @@ locate-path@^3.0.0:
   dependencies:
     p-locate "^3.0.0"
     path-exists "^3.0.0"
+
+lodash.assign@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/lodash.assign/-/lodash.assign-4.2.0.tgz#0d99f3ccd7a6d261d19bdaeb9245005d285808e7"
 
 lodash.debounce@^4.0.8:
   version "4.0.8"
@@ -2375,17 +2361,13 @@ run-queue@^1.0.0, run-queue@^1.0.3:
   dependencies:
     aproba "^1.1.1"
 
-rxfire@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/rxfire/-/rxfire-1.0.7.tgz#3cc1d361a64f4a15eb15c6b28f380fbe08f6fc79"
-  dependencies:
-    firebase "^2.3.2"
-    firebase-util "^0.2.5"
-    rxjs "^5.0.0-beta.1"
+rxfire@^3.0.0:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/rxfire/-/rxfire-3.0.1.tgz#73e2408feee8fdbb6458d28189a53aff7d278546"
 
-rxjs@^5.0.0-beta.1:
-  version "5.5.11"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.5.11.tgz#f733027ca43e3bec6b994473be4ab98ad43ced87"
+rxjs@^5.1.1:
+  version "5.5.12"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.5.12.tgz#6fa61b8a77c3d793dbaf270bee2f43f652d741cc"
   dependencies:
     symbol-observable "1.0.1"
 
@@ -2531,6 +2513,14 @@ source-map@^0.5.6:
 source-map@^0.6.1, source-map@~0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
+
+spawn-rx@^2.0.12:
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/spawn-rx/-/spawn-rx-2.0.12.tgz#b6285294499426089beea0c3c1ec32d7fc57a376"
+  dependencies:
+    debug "^2.5.1"
+    lodash.assign "^4.2.0"
+    rxjs "^5.1.1"
 
 split-string@^3.0.1, split-string@^3.0.2:
   version "3.1.0"
